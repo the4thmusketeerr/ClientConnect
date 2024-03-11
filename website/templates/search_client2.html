@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Search Results</h1>
+
+{% if clients %}
+    <ul>
+        {% for client in clients %}
+            <li>{{ client.first_name }} {{ client.last_name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No clients found for "{{ search_query }}".</p>
+{% endif %}
+
+{% endblock %}

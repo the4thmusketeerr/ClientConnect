@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"  style="display: flex; justify-content:space-between;">
     <a class="navbar-brand" href="{% url 'home' %}">ClientConnect</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,14 +10,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         {%if user.is_authenticated%}
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"  style="color: white;">Log Out</a></li><br><br>
+        <li class="nav-item"><a class="nav-link" href="{% url 'add_client' %}" style="color: white;">Add Client</a></li>
+
+        
 
         {% else %}
 
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Log In</a>
+        
 
 
         {% endif %}
